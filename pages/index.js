@@ -7,6 +7,15 @@ export default function Home() {
       <Head>
         <title>Nahid Hossain</title>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5863NWP');`,
+          }}
+        />
       </Head>
 
       <main className={styles.main}>
@@ -14,9 +23,15 @@ export default function Home() {
 
         <p className={styles.description}>
           I don't have much to share right now, but I have big plans for this
-          site. In the meantime, why don't you visit my linked in account to
-          know more? And oh! GitHub too, since Sir Isaac Newton said, "Life
-          without GitHub is not a life worth living". Just kidding :)
+          site.
+          <br /> <br />
+          In the meantime, why don't you visit my LinkedIn profile to know more?
+          <br /> <br />
+          And oh! GitHub too, since Sir Isaac Newton said,
+          <br />
+          "Life without GitHub is not a life worth living".
+          <br /> <br />
+          Just kidding :)
         </p>
 
         <div className={styles.grid}>
@@ -24,8 +39,8 @@ export default function Home() {
             href="https://www.linkedin.com/in/md-nahid-hossain/"
             className={styles.card}
           >
-            <h3>LinkedIn &rarr;</h3>
-            <p>Get to know me or connect with me.</p>
+            <h3>LinkedIn</h3>
+            <p>Get to know me or Connect with me.</p>
           </a>
 
           <a href="https://github.com/oikantik" className={styles.card}>
