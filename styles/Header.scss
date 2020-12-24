@@ -1,0 +1,108 @@
+@use './styles/partials/mixins'as *;
+@use './styles/partials/typography'as *;
+
+.drawer-menu {
+  background-color: color(global-black);
+}
+
+.drawer-menu-nav {
+  position: relative;
+
+  &__items {
+    list-style: none;
+    top: 2.5rem;
+    z-index: 1;
+  }
+
+  &__item {
+    padding: .5rem 1rem;
+    color: color(borders);
+    border-bottom: 1px solid color(github-grey);
+  }
+}
+
+.header {
+  display: flex;
+  padding: $mobile-padding;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-menu {
+  font-size: 1.5rem;
+
+  &__icon {
+    width: 24px !important;
+    height: 24px !important;
+    color: color(global-black);
+
+    &--dark {
+      color: color(global-white);
+    }
+  }
+}
+
+.switch {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 54px;
+  height: 24px;
+
+  &__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__input:checked+&__slider {
+    background-color: color(global-black);
+    border: 1px solid color(global-white);
+  }
+
+  &__input:focus+&__slider {
+    box-shadow: 0 0 1px color(global-black);
+  }
+
+  &__input:checked+&__slider:before {
+    background-color: color(global-white);
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+
+  &__slider {
+    border: 1px solid color(global-black);
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: color(global-white);
+    -webkit-transition: .4s;
+    transition: .4s;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 3px;
+      background-color: color(global-black);
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    &--round {
+      border-radius: 34px;
+    }
+
+    &--round::before {
+      border-radius: 50%;
+    }
+  }
+
+}

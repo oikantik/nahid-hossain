@@ -1,0 +1,70 @@
+@use './styles/partials/mixins'as *;
+@use './styles/partials/typography'as *;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+  padding: $mobile-padding;
+  text-align: center;
+
+  &__title {
+    @include h1;
+    margin-bottom: 1rem;
+
+    &--dark {
+      color: color(global-white);
+    }
+  }
+
+  &__paragraph {
+    @include p1;
+    margin-bottom: 1rem;
+
+    &--dark {
+      color: color(global-white);
+    }
+  }
+}
+
+.sidebar-connect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-connect-icons {
+  margin-bottom: 1rem;
+  border: 1px solid color(global-black);
+  border-radius: 30px;
+  padding: .5rem 1rem .5rem 1rem;
+
+  &--dark {
+    border: 1px solid color(global-white);
+  }
+
+  &__social {
+    margin-right: 1rem;
+
+    &--dark {
+      color: color(global-white);
+    }
+  }
+
+  &__text {
+    margin-right: 1rem;
+
+    &--dark {
+      color: color(global-white);
+    }
+  }
+
+  &__link {
+    &--dark {
+      color: color(global-white);
+    }
+  }
+}

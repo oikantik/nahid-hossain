@@ -1,0 +1,10 @@
+@use './styles/partials/mixins'as *;
+@use './styles/partials/typography'as *;
+@use './partials/resets';
+@use './Header.scss';
+@use './Home.scss';
+@use './Sidebar.scss';
+
+.dark-mode {
+  background-color: color(global-black);
+}
