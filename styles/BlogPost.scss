@@ -1,0 +1,39 @@
+@use './styles/partials/mixins'as *;
+@use './styles/partials/typography'as *;
+
+
+
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 50%;
+  height: 100vh;
+  padding: $mobile-padding;
+
+  &__title {
+    @include h2;
+    margin-bottom: 1rem;
+  }
+
+  &__time-to-read {
+    width: 100%;
+    @include m-p2;
+    margin-bottom: 1rem;
+  }
+
+  &__paragraph {
+    @include p1;
+    margin-bottom: 1rem;
+  }
+}
+
+.dark-mode {
+
+  .blog-post__title,
+  .blog-post__time-to-read,
+  .blog-post__paragraph {
+    color: color(global-white);
+  }
+
+}

@@ -1,8 +1,7 @@
 @import 'variables';
 
 // FONT SIZE variable map and lookup function
-$font-size: (
-    h1-tablet: 2rem,
+$font-size: (h1-tablet: 2rem,
     h1-mobile: 1.75rem,
     h2-tablet: 1.5rem,
     h2-mobile: 1.25rem,
@@ -15,8 +14,7 @@ $font-size: (
     p2-tablet: 0.875rem,
     p2-mobile: 0.8125rem,
     p3-tablet: 0.75rem,
-    p3-mobile: 0.6875rem
-);
+    p3-mobile: 0.6875rem);
 
 @function font-size($element) {
     @return map-get($font-size, $element);
@@ -80,7 +78,7 @@ $font-size: (
 // p1 used for body large
 @mixin m-p1 {
     font-size: font-size(p1-mobile);
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.625rem;
     color: inherit;
 }
@@ -94,7 +92,7 @@ $font-size: (
 // p2 used for body medium
 @mixin m-p2 {
     font-size: font-size(p2-mobile);
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.25rem;
     color: inherit;
 }
@@ -108,7 +106,7 @@ $font-size: (
 // p3 used for body small
 @mixin m-p3 {
     font-size: font-size(p3-mobile);
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1rem;
     color: inherit;
 }

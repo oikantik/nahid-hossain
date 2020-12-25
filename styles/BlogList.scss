@@ -1,0 +1,72 @@
+@use './styles/partials/mixins'as *;
+@use './styles/partials/typography'as *;
+
+.blog-list-component {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: $mobile-padding;
+
+
+  &__title {
+    @include h2;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &__description {
+    @include p1;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+.blog-list-component-card {
+  padding: 2rem;
+  display: flex;
+  border-radius: 4px;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  background-color: color(borders);
+
+  &__title {
+    @include m-h2;
+    margin-bottom: .5rem;
+    font-weight: 600;
+  }
+
+  &__description {
+    @include p1;
+    margin-bottom: .5rem;
+    font-weight: 300;
+  }
+
+  &__url {
+    @include m-p3;
+    font-weight: 300;
+  }
+}
+
+.dark-mode {
+
+  .blog-list-component {
+
+    color: color(global-white);
+
+    &__title,
+    &__description {
+      color: color(global-white)
+    }
+  }
+
+  .blog-list-component-card {
+    background-color: color(black-opacity);
+
+    &__title,
+    &__description,
+    &__url {
+      color: color(global-white)
+    }
+  }
+
+}

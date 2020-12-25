@@ -3,13 +3,12 @@
 
 
 
-.sidebar {
+.thankyou {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 50%;
-  height: 100vh;
+  min-height: 100vh;
   padding: $mobile-padding;
   text-align: center;
 
@@ -18,20 +17,25 @@
     margin-bottom: 1rem;
   }
 
-  &__paragraph {
+  &__description {
     @include p1;
     margin-bottom: 1rem;
+
+    &--link {
+      color: color(optimal-grey);
+    }
   }
 }
 
-.sidebar-connect {
+
+.thankyou-connect {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.sidebar-connect-icons {
+.thankyou-connect-icons {
   margin-bottom: 1rem;
   border: 1px solid color(global-black);
   border-radius: 30px;
@@ -49,15 +53,20 @@
 
 .dark-mode {
 
-  .sidebar__title,
-  .sidebar__paragraph,
-  .sidebar-connect-icons__social,
-  .sidebar-connect-icons__text,
-  .sidebar-connect-icons__link {
+  .thankyou__title,
+  .thankyou__description,
+  .thankyou-connect-icons__social,
+  .thankyou-connect-icons__text,
+  .thankyou-connect-icons__link {
     color: color(global-white);
+
+    &--link {
+      color: color(optimal-grey);
+    }
   }
 
-  .sidebar-connect-icons {
+  .thankyou-connect-icons {
     border: 1px solid color(global-white);
   }
+
 }

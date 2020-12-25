@@ -3,10 +3,19 @@
 
 .drawer-menu {
   background-color: color(global-black);
+  position: fixed;
+  height: 100%;
 }
 
 .drawer-menu-nav {
   position: relative;
+
+  &__close-icon {
+    color: color(global-white);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
 
   &__items {
     list-style: none;
@@ -16,9 +25,14 @@
 
   &__item {
     padding: .5rem 1rem;
-    color: color(borders);
     border-bottom: 1px solid color(github-grey);
+
+    &>a {
+      color: color(borders);
+    }
   }
+
+
 }
 
 .header {
@@ -26,6 +40,11 @@
   padding: $mobile-padding;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: color(global-white);
+  top: 0;
 }
 
 .header-menu {
@@ -35,12 +54,9 @@
     width: 24px !important;
     height: 24px !important;
     color: color(global-black);
-
-    &--dark {
-      color: color(global-white);
-    }
   }
 }
+
 
 .switch {
   position: relative;
@@ -103,6 +119,17 @@
     &--round::before {
       border-radius: 50%;
     }
+  }
+
+}
+
+.dark-mode {
+  .header {
+    background-color: color(global-black);
+  }
+
+  .header-menu__icon {
+    color: color(global-white);
   }
 
 }
