@@ -5,6 +5,7 @@
   background-color: color(global-black);
   position: fixed;
   height: 100%;
+  z-index: 11;
 }
 
 .drawer-menu-nav {
@@ -20,7 +21,7 @@
   &__items {
     list-style: none;
     top: 2.5rem;
-    z-index: 1;
+    z-index: 11;
   }
 
   &__item {
@@ -45,6 +46,15 @@
   height: 60px;
   background-color: color(global-white);
   top: 0;
+  z-index: 10;
+
+  @include tablet {
+    padding: $tablet-padding;
+  }
+
+  @include desktop {
+    padding: 3rem $desktop-padding;
+  }
 }
 
 .header-menu {

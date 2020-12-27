@@ -7,9 +7,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 50%;
-  height: 100vh;
   padding: $mobile-padding;
+  padding-top: 4rem;
+
+  @include tablet {
+    padding: $tablet-padding;
+    padding-top: 5rem;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    padding: 3rem $desktop-padding;
+    padding-top: 6rem;
+  }
 
   &__title {
     @include h2;
@@ -22,15 +34,46 @@
     margin-bottom: 1rem;
   }
 
+  &__author-info {
+    width: 100%;
+    @include m-p1;
+    margin-bottom: 1rem;
+  }
+
+  &__author-title {
+    width: 100%;
+    @include m-p1;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
   &__paragraph {
     @include p1;
     margin-bottom: 1rem;
+  }
+
+  &__images {
+    width: 100%;
+
+    @include tablet {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  &__link {
+    @include p1;
+    color: color(optimal-grey);
   }
 }
 
 .dark-mode {
 
   .blog-post__title,
+  .blog-post__author-title,
+  .blog-post__author-info,
   .blog-post__time-to-read,
   .blog-post__paragraph {
     color: color(global-white);

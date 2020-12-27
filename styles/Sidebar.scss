@@ -8,19 +8,37 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 50%;
   height: 100vh;
   padding: $mobile-padding;
   text-align: center;
 
+  @include tablet {
+    padding: $tablet-padding;
+    align-items: initial;
+  }
+
+  @include desktop {
+    padding: $desktop-padding;
+  }
+
   &__title {
     @include h2;
     margin-bottom: 1rem;
+
+    @include tablet {
+      @include h1;
+      text-align: left;
+    }
   }
 
   &__paragraph {
     @include p1;
     margin-bottom: 1rem;
+
+    @include tablet {
+      text-align: left;
+      width: 80%;
+    }
   }
 }
 
@@ -29,6 +47,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: initial;
+  }
 }
 
 .sidebar-connect-icons {
@@ -36,6 +59,10 @@
   border: 1px solid color(global-black);
   border-radius: 30px;
   padding: .5rem 1rem .5rem 1rem;
+
+  @include tablet {
+    margin-right: 1rem;
+  }
 
   &__social {
     margin-right: 1rem;

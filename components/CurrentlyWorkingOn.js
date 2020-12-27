@@ -8,22 +8,25 @@ function CurrentlyWorkingOn() {
         This is what I am currently doing
       </p>
       <article className='currently-working-card'>
-        <p className='currently-working-card__description'>
-          Finalizing my learning management site so it is production ready, the
-          idea is to make it live as a SaaS so everyone can use it.
-        </p>
-      </article>
-
-      <article className='currently-working-card'>
-        <p className='currently-working-card__description'>
-          Polishing my knowledge on Typescript, Graphql, and learning Three.js
-        </p>
-      </article>
-
-      <article className='currently-working-card'>
-        <p className='currently-working-card__description'>
-          Playing with my Raspberry Pi!
-        </p>
+        <ul>
+          <li>
+            <p className='currently-working-card__description'>
+              Finalizing my learning management site so it is production ready,
+              the idea is to make it live as a SaaS so everyone can use it.
+            </p>
+          </li>
+          <li>
+            <p className='currently-working-card__description'>
+              Polishing my knowledge on Typescript, Graphql, and learning
+              Three.js
+            </p>
+          </li>
+          <li>
+            <p className='currently-working-card__description'>
+              Playing with my Raspberry Pi!
+            </p>
+          </li>
+        </ul>
       </article>
     </section>
   );

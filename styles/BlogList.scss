@@ -2,11 +2,19 @@
 @use './styles/partials/typography'as *;
 
 .blog-list-component {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: $mobile-padding;
+  margin-bottom: 4rem;
 
+  @include tablet {
+    padding: $tablet-padding;
+    margin-bottom: 0rem;
+  }
+
+  @include desktop {
+    padding: $desktop-padding;
+  }
 
   &__title {
     @include h2;

@@ -6,7 +6,17 @@
   display: flex;
   flex-direction: column;
   padding: $mobile-padding;
+  margin-bottom: 4rem;
 
+  @include tablet {
+    padding: $tablet-padding;
+    padding-top: 5rem;
+  }
+
+  @include desktop {
+    padding: $desktop-padding;
+    padding-top: 7rem;
+  }
 
   &__title {
     @include h2;

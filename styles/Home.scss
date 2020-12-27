@@ -1,3 +1,35 @@
+@use './styles/partials/mixins'as *;
+@use './styles/partials/typography'as *;
+
 .container {
   min-height: 100vh;
+}
+
+.container-main {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // @include desktop {
+  //   width: 80%;
+  //   margin: 0 auto;
+  // }
+}
+
+.container-sidebar {
+  @include tablet {
+    display: flex;
+    position: fixed;
+    width: 50%;
+  }
+}
+
+.container-others {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+  }
 }

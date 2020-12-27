@@ -12,12 +12,16 @@ export default function Home() {
       <Head>
         <title>Welcome | Nahid Hossain</title>
       </Head>
-      <main>
-        <Sidebar />
-        <Projects />
-        <CurrentlyWorkingOn />
-        <BlogList />
-        <Thankyou />
+      <main className='container-main'>
+        <div className='container-sidebar'>
+          <Sidebar />
+        </div>
+        <div className='container-others'>
+          <Projects />
+          <CurrentlyWorkingOn />
+          <BlogList />
+          <Thankyou />
+        </div>
       </main>
     </div>
   );

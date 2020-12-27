@@ -9,14 +9,8 @@
 @use './BlogList.scss';
 @use './Thankyou.scss';
 @use './BlogPost.scss';
+@use './Prism.scss';
 
-.dark-mode {
-  background-color: color(global-black);
-}
-
-.light-mode {
-  background-color: color(global-white);
-}
 
 .loading {
   position: absolute;
@@ -36,4 +30,22 @@
   &__description {
     @include m-p1;
   }
+}
+
+// progress color
+#nprogress .bar {
+  background: color(global-black) !important;
+}
+
+
+.dark-mode {
+  background-color: color(global-black);
+
+  #nprogress .bar {
+    background: color(global-white) !important;
+  }
+}
+
+.light-mode {
+  background-color: color(global-white);
 }

@@ -6,7 +6,6 @@ import Router from "next/router";
 import Head from "next/head";
 import NProgress from "nprogress";
 import { Fragment, useEffect, useState } from "react";
-
 import "nprogress/nprogress.css";
 import Loading from "../components/Loading";
 import Header from "../components/Header";

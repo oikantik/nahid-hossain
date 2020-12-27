@@ -8,9 +8,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
   padding: $mobile-padding;
   text-align: center;
+
+  @include tablet {
+    padding: $tablet-padding;
+  }
+
+  @include desktop {
+    padding: $desktop-padding;
+  }
 
   &__title {
     @include h2;
@@ -40,6 +48,10 @@
   border: 1px solid color(global-black);
   border-radius: 30px;
   padding: .5rem 1rem .5rem 1rem;
+
+  @include tablet {
+    display: none;
+  }
 
   &__social {
     margin-right: 1rem;
