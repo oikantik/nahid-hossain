@@ -3,8 +3,11 @@ import { useRouter } from "next/router";
 import { Fragment, useEffect } from "react";
 import Loading from "../../components/Loading";
 import Prism from "prismjs";
-import Image from "next/image";
 import "prismjs/components/prism-jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
+import { DiscussionEmbed } from "disqus-react";
 
 export default function Blog() {
   const router = useRouter();
@@ -24,13 +27,19 @@ export default function Blog() {
         </Head>
         <section className='blog-post'>
           <h1 className='blog-post__title'>
+            <Link href='/blog'>
+              <a>
+                <FontAwesomeIcon
+                  icon={faArrowLeft}
+                  className='blog-post__title-icon-back'
+                />
+              </a>
+            </Link>
             How to add a hamburger menu to your react website
           </h1>
-          <span className='blog-post__author-info'>
-            <span className='blog-post__author-title'>Author:</span> Nahid
-            Hossain
+          <span className='blog-post__post-info'>
+            By Nahid Hossain | December 20, 2020 | 5min Read
           </span>
-          <span className='blog-post__time-to-read'>5min Read</span>
           <div className='blog-post__paragraph'>
             You have eaten hamburgers, if you are like I am, you probably do not
             like them. But hamburger menu? That is a totally different story. I
@@ -196,6 +205,16 @@ return (<div>
             Feel free to contact me if you run into any issue or if you need any
             help!
           </div>
+
+          <DiscussionEmbed
+            shortname='nahid-hossain'
+            config={{
+              url:
+                "https://nahid-hossain.com/blog/add-hamburger-menu-to-your-react-website",
+              identifier: "add-hamburger-menu-to-your-react-website-01",
+              title: "How to add a hamburger menu to your react website",
+            }}
+          />
         </section>
       </Fragment>
     );

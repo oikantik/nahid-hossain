@@ -12,6 +12,8 @@
   text-align: center;
   //margin-top: 5rem;
   height: 100vh;
+  scroll-behavior: smooth;
+
 
   @include tablet {
 
@@ -70,9 +72,16 @@
   border: 1px solid color(global-black);
   border-radius: 30px;
   padding: .5rem 1rem .5rem 1rem;
+  transform: scale(1);
+  transition: transform .5s ease;
 
   @include tablet {
     margin-right: 1rem;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform .5s ease;
   }
 
   &__social {

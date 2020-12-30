@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   padding: $mobile-padding;
+  scroll-behavior: smooth;
+
 
   @include tablet {
     padding: $tablet-padding;
@@ -39,6 +41,13 @@
   flex-direction: column;
   margin-bottom: 2rem;
   background-color: color(borders);
+  transform: scale(1);
+  transition: transform .5s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform .5s ease;
+  }
 
   &__title {
     @include m-h2;

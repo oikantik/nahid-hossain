@@ -92,8 +92,13 @@
   &__item {
     padding: .5rem 1rem;
 
-    @include tablet {
-      border-right: 1px solid color(github-grey);
+    &--active {
+      border-bottom: 4px solid color(borders);
+    }
+
+    &:hover {
+      border-bottom: 4px solid color(borders);
+      transition: border-bottom .5s ease;
     }
 
     &>a {
@@ -105,10 +110,15 @@
         @include p1;
         color: color(borders);
       }
+
+      &:hover {
+        color: color(global-white);
+        transition: color .5s ease;
+      }
     }
 
     &:last-of-type {
-      border-right: none;
+      border: none;
     }
   }
 

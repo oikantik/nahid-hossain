@@ -3,9 +3,11 @@
 
 .container {
   min-height: 100vh;
+
 }
 
 .container-main {
+
   @include tablet {
     display: flex;
     justify-content: space-between;

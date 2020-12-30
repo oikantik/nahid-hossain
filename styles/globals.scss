@@ -11,6 +11,10 @@
 @use './BlogPost.scss';
 @use './Prism.scss';
 
+html {
+  scroll-behavior: smooth;
+
+}
 
 .loading {
   position: absolute;
