@@ -11,7 +11,7 @@ function BlogList() {
       <section id='blog' className='blog-list-component'>
         <h1 className='blog-list-component__title'>Blog Posts</h1>
         <p className='blog-list-component__description'>
-          Yeah, sometimes I like to write too!
+          Sometimes I like to write too!
         </p>
         <article className='blog-list-component-card'>
           <h2 className='blog-list-component-card__title'>

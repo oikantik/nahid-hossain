@@ -3,6 +3,7 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { CSSTransition } from "react-transition-group";
 
 function Header() {
   const darkMode = useDarkMode(false);
@@ -51,14 +52,14 @@ function Header() {
         </label>
       </div>
 
-      {menu && (
+      <CSSTransition
+        in={menu}
+        timeout={300}
+        classNames='drawer-menu'
+        unmountOnExit>
         <div className='drawer-menu' ref={navMenu}>
+          <FontAwesomeIcon icon={faTimes} className='drawer-menu__close-icon' />
           <nav className='drawer-menu-nav'>
-            <FontAwesomeIcon
-              icon={faTimes}
-              className='drawer-menu-nav__close-icon'
-              onClick={() => setMenu(false)}
-            />
             <ul
               className='drawer-menu-nav__items'
               onClick={() => setMenu(false)}>
@@ -72,15 +73,18 @@ function Header() {
                 <Link href='/#currently-working'>Working On</Link>
               </li>
               <li className='drawer-menu-nav__item'>
-                <Link href='/#blog'>Blog</Link>
+                <Link href='/blog'>Blog</Link>
               </li>
               <li className='drawer-menu-nav__item'>
-                <Link href='/#thankyou'>Thank you</Link>
+                <FontAwesomeIcon
+                  icon={faTimes}
+                  className='drawer-menu-nav__close-icon'
+                />
               </li>
             </ul>
           </nav>
         </div>
-      )}
+      </CSSTransition>
     </Fragment>
   );
 }

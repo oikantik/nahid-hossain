@@ -8,6 +8,11 @@ function Sidebar() {
   return (
     <Fragment>
       <div className='sidebar'>
+        <img
+          src='/assets/images/avatar.jpg'
+          className='sidebar__avatar'
+          alt='avatar'
+        />
         <h1 className='sidebar__title'>Hi! I am Nahid!</h1>
         <p className='sidebar__paragraph'>
           I am a fullstack developer. I currently live in Toronto, Ontario. My

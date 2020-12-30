@@ -4,32 +4,111 @@
 .drawer-menu {
   background-color: color(global-black);
   position: fixed;
-  height: 100%;
   z-index: 11;
+  width: 100%;
+  //  margin-top: -300px;
+  //transition: all 0.5s ease;
+
+  &__close-icon {
+    color: color(global-white);
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    @include tablet {
+      display: none !important;
+    }
+  }
+
 }
+
+
+//menu transition starts
+
+.drawer-menu-enter {
+  margin-top: -300px;
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.drawer-menu-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  margin-top: 0;
+  transition: opacity .3s, transform .3s, margin-top .3s;
+}
+
+.drawer-menu-exit {
+  opacity: 1;
+}
+
+.drawer-menu-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  margin-top: -300px;
+  transition: opacity .6s, transform .6s, margin-top .6s;
+}
+
+
+//menu transition ends
+
 
 .drawer-menu-nav {
   position: relative;
 
   &__close-icon {
-    color: color(global-white);
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    display: none !important;
+
+    @include tablet {
+      color: color(global-white);
+      cursor: pointer;
+      display: block !important;
+    }
+
   }
 
   &__items {
     list-style: none;
     top: 2.5rem;
     z-index: 11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    @include tablet {
+      flex-direction: row;
+      height: 60px;
+    }
+
+    @include desktop {
+      padding: 3rem $desktop-padding;
+    }
+
   }
 
   &__item {
     padding: .5rem 1rem;
-    border-bottom: 1px solid color(github-grey);
+
+    @include tablet {
+      border-right: 1px solid color(github-grey);
+    }
 
     &>a {
+
+      @include m-h2;
       color: color(borders);
+
+      @include tablet {
+        @include p1;
+        color: color(borders);
+      }
+    }
+
+    &:last-of-type {
+      border-right: none;
     }
   }
 
@@ -48,6 +127,7 @@
   top: 0;
   z-index: 10;
 
+
   @include tablet {
     padding: $tablet-padding;
   }
@@ -64,6 +144,7 @@
     width: 24px !important;
     height: 24px !important;
     color: color(global-black);
+    cursor: pointer;
   }
 }
 

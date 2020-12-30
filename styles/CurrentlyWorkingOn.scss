@@ -6,14 +6,15 @@
   display: flex;
   flex-direction: column;
   padding: $mobile-padding;
-  margin-bottom: 4rem;
 
   @include tablet {
     padding: $tablet-padding;
+    padding-bottom: 0;
   }
 
   @include desktop {
     padding: $desktop-padding;
+    padding-bottom: 0;
   }
 
   &__title {

@@ -8,17 +8,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   padding: $mobile-padding;
   text-align: center;
+  //margin-top: 5rem;
+  height: 100vh;
 
   @include tablet {
+
     padding: $tablet-padding;
     align-items: initial;
   }
 
   @include desktop {
     padding: $desktop-padding;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    width: 120px;
+    height: 120px;
   }
 
   &__title {
@@ -34,9 +43,11 @@
   &__paragraph {
     @include p1;
     margin-bottom: 1rem;
+    max-width: 400px;
 
     @include tablet {
       text-align: left;
+      max-width: 100%;
       width: 80%;
     }
   }

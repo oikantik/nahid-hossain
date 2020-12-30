@@ -6,7 +6,7 @@ import Prism from "prismjs";
 import Image from "next/image";
 import "prismjs/components/prism-jsx";
 
-export default function Home() {
+export default function Blog() {
   const router = useRouter();
   const { pageslug } = router.query;
 
